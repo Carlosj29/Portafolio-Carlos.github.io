@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot</title>
+  <link rel = "stylesheet" href="css/styles3.css">
+  <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container h-100">
+  <div class="row align-items-center h-100">
+    <div class="col-md-6 mx-auto">
+      <div class="card">
+        <div class="card-header text-center fw-bold">
+          <!-- Aquí puedes poner el título del chatbot -->
+          <img width = "120px" src = "./assets/Logo Chatbot.png" alt = "foto">
+          Chatbot de Información
+        </div>
+        <div class="card-body">
+          <div class="card">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <form id="chat-form">
+                <div class="input-group">
+                  <select id="convenio-select">
+                    <option value="Su nombre completo es" selected>¿Cual es su nombre completo?</option>
+                    <option value="Carlos es de">¿De donde es?</option>
+                    <option value="La profesion de Carlos es">¿Cual es su profesion?</option>
+                    <option value="Las habilidades de Carlos son">Habilidades de Carlos</option>                          
+                    <option value="Carlos se educo en">Educacion</option>
+                    <option value="La experiencia de Carlos es">Experiencia</option>                          
+                    <option value="Sobre Carlos">Sobre Carlos</option>             
+                    <option value="Sus datos de contacto son">Datos de Contacto</option>
+                    
+                </select>
+                  <button type="submit" id="send-button">Enviar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="card">
+  <ul id="message-history" class="list-unstyled mb-4"></ul>
+
+
+<button type="button" class="btn btn-secondary" onclick="location.reload()">Borrar chat</button>
+<button type="button" class="btn btn-primary" id="export-button">Exportar chat</button>
+</div>
+
+<audio id="chat-audio">
+  <source src="ding.mp3" type="audio/mpeg">
+</audio>
+
+<script src="chatbot.js"></script>
+
+</body>
+</html>
